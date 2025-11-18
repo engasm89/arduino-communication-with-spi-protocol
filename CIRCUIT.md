@@ -7,6 +7,7 @@
 ## Connections
 
 - Arduino (Master) to SPI Slave: `MOSI`, `MISO`, `SCK`, `SS`. Common `GND`.
+- Optionally connect `RESET` if required by the slave device.
 
 ## Diagram (ASCII)
 
@@ -16,9 +17,11 @@
  Arduino SCK  ---- SCK  Slave
  Arduino SS   ---- CS   Slave
  GND          ---- GND  Slave
+ VCC          ---- VCC  Slave
 ```
 
-## Purchase With Discount
+## Notes
 
-Get a discounted price and build reliable SPI projects — use the course link above.
+- Keep SCK within the slave’s maximum frequency; adjust SPI speed accordingly.
+- Use short wires and proper shielding for high-speed signals.
 
